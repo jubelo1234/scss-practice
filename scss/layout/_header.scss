@@ -1,13 +1,26 @@
+@use "../globals/" as size;
+
 header {
   padding: 16px 5vw 0;
+ 
+
+  @include size.breakpoint(tablet) {
+    padding: 34px 8vw 0;
+  }
 
   nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    max-width: 1110px;
+    margin: 0 auto;
 
     img {
       width: 44px;
+
+      @include size.breakpoint(tablet) {
+        width: 64px;
+      }
     }
 
     button {

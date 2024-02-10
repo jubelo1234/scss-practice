@@ -1,13 +1,35 @@
+@use "../globals/" as size;
+
 main {
   padding: 0 5vw;
+  @include size.breakpoint(tablet) {
+    padding: 0 8vw;
+  }
   .main-text {
+    max-width: 1110px;
+    margin: 0 auto;
+
     h1 {
       text-align: center;
-      margin-top: 36px;
+      margin-top: 46px;
       font-size: 36px;
       line-height: 45px;
       margin-bottom: 16px;
       color: #030303;
+
+      @include size.breakpoint(tablet) {
+        margin-top: 64px;
+        font-size: 44px;
+        line-height: 55px;
+        margin-bottom: 27px;
+      }
+      @include size.breakpoint(desktop) {
+        margin-top: 66px;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 71px;
+        margin-bottom: 23px;
+      }
     }
 
     p {
@@ -16,6 +38,100 @@ main {
       font-weight: 500;
       font-size: 16px;
       line-height: 26px;
+
+      @include size.breakpoint(tablet) {
+        font-size: 18px;
+        width: 573px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .projects {
+    margin: 42px 0 100px;
+    max-width: 1110px;
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+      "one one"
+      "one one"
+      "two three"
+      "four four"
+      "five five"
+      "six six";
+    grid-template-rows: repeat(6, 182px);
+
+    @include size.breakpoint(tablet) {
+      gap: 24px;
+      grid-template-rows: repeat(3, 182px);
+      grid-template-areas:
+        "one one two three"
+        "one one four four"
+        "five five six six";
+      margin: 64px 0 120px;
+    }
+
+    @include size.breakpoint(desktop) {
+      margin: 80px auto 136px;
+      grid-template-rows: repeat(2, 182px);
+      grid-template-areas:
+        "one one two three four four"
+        "one one five five six six";
+    }
+
+    div {
+      width: 100%;
+      height: 100%;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      color: #ffffff;
+      padding: 22px;
+      text-transform: capitalize;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      position: relative;
+      border-radius: 8px;
+
+      @include size.breakpoint(tablet) {
+        padding: 24px;
+      }
+
+      img {
+        position: absolute;
+        top: 22px;
+        right: 22px;
+
+        @include size.breakpoint(tablet) {
+          top: 24px;
+          right: 24px;
+        }
+      }
+    }
+
+    &__1 {
+      background-color: #755cde;
+      grid-area: one;
+    }
+    &__2 {
+      background-color: #f6a560;
+      grid-area: two;
+    }
+    &__3 {
+      background-color: #f39e9e;
+      grid-area: three;
+    }
+    &__4 {
+      background-color: #eb7565;
+      grid-area: four;
+    }
+    &__5 {
+      background-color: #61c4b7;
+      grid-area: five;
+    }
+    &__6 {
+      background-color: #552049;
+      grid-area: six;
     }
   }
 }
