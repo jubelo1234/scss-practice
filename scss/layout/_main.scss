@@ -134,4 +134,106 @@ main {
       grid-area: six;
     }
   }
+  .amy {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.55rem;
+    max-width: 500px;
+    margin: 100px auto 96px;
+    padding: 0 1vw;
+
+    @include size.breakpoint(tablet) {
+      flex-direction: row;
+      margin: 117px auto 120px;
+      padding: 0;
+      max-width: 1000px;
+      gap: 5vw;
+    }
+
+    @include size.breakpoint(desktop) {
+      margin: 136px auto 100px;
+      max-width: 1110px;
+    }
+
+    img {
+      width: 90%;
+
+      @media screen and (min-width: 340px) {
+        width: 300px;
+      }
+
+      @include size.breakpoint(desktop) {
+        width: 445px;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      @include size.breakpoint(tablet) {
+        text-align: left;
+        max-width: 50%;
+        align-items: start;
+      }
+
+      h2 {
+        font-size: 1.52rem;
+        line-height: 2rem;
+        letter-spacing: 0.05rem;
+        font-weight: 700;
+
+        @include size.breakpoint(desktop) {
+          font-size: 2.35rem;
+          letter-spacing: 0.08rem;
+          line-height: 3rem;
+        }
+      }
+
+      p {
+        margin-top: 1.5rem;
+        font-size: 0.98rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.75rem;
+        color: #7a746e;
+
+        @include size.breakpoint(tablet) {
+          font-size: 1.15rem;
+          line-height: 1.75rem;
+        }
+
+        @include size.breakpoint(desktop) {
+          margin-top: 2.3rem;
+          margin-bottom: 2rem;
+        }
+      }
+
+      button {
+        height: 2.8rem;
+        font-size: 0.9rem;
+        padding: 0 1.8rem;
+        background-color: #eb7565;
+        border-radius: 9999px;
+        letter-spacing: 0.03rem;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-weight: 500;
+        text-transform: capitalize;
+
+        @include size.breakpoint(desktop) {
+          color: #fff;
+          height: 3.5rem;
+          font-size: 1rem;
+          padding: 0 2.9rem;
+          letter-spacing: 0.03rem;
+        }
+      }
+    }
+  }
 }
