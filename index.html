@@ -20,92 +20,98 @@
       </nav>
     </header>
     <main>
-      <div class="main-text">
-        <h1>Design solutions made easy</h1>
-        <p>
-          With over ten years of experience in various design disciplines, I’m
-          your one-stop shop for your design needs.
-        </p>
-      </div>
-
-      <div class="projects">
-        <div class="projects__1">
-          <img
-            src="./images/pattern-graphic-design.svg"
-            alt="pattern-graphic-design"
-          />
-          <p>Graphic design</p>
-        </div>
-        <div class="projects__2">
-          <img src="./images/pattern-ui-ux.svg" alt="pattern-ui-ux" />
-          <p>UI/UX</p>
-        </div>
-        <div class="projects__3">
-          <img src="./images/pattern-apps.svg" alt="pattern-apps" />
-          <p>apps</p>
-        </div>
-        <div class="projects__4">
-          <img
-            src="./images/pattern-illustrations.svg"
-            alt="pattern-illustrations"
-          />
-          <p>illustrations</p>
-        </div>
-        <div class="projects__5">
-          <img
-            src="./images/pattern-photography.svg"
-            alt="pattern-photography"
-          />
-          <p>photography</p>
-        </div>
-        <div class="projects__6">
-          <img
-            src="./images/pattern-motion-graphics.svg"
-            alt="pattern-motion-graphics"
-          />
-          <p>motion graphics</p>
-        </div>
-      </div>
-
-      <div class="amy">
-        <img src="./images/image-amy.webp" alt="profile-picture" />
-        <div class="amy__text">
-          <h2>I’m Amy, and I’d love to work on your next project</h2>
+      <section class="main_section">
+        <div class="main-text">
+          <h1>Design solutions made easy</h1>
           <p>
-            I love working with others to create beautiful design solutions.
-            I’ve designed everything from brand illustrations to complete mobile
-            apps. I’m also handy with a camera!
+            With over ten years of experience in various design disciplines, I’m
+            your one-stop shop for your design needs.
           </p>
-          <button>free consultation</button>
         </div>
-      </div>
 
+        <div class="projects">
+          <div class="projects__1">
+            <img
+              src="./images/pattern-graphic-design.svg"
+              alt="pattern-graphic-design"
+            />
+            <p>Graphic design</p>
+          </div>
+          <div class="projects__2">
+            <img src="./images/pattern-ui-ux.svg" alt="pattern-ui-ux" />
+            <p>UI/UX</p>
+          </div>
+          <div class="projects__3">
+            <img src="./images/pattern-apps.svg" alt="pattern-apps" />
+            <p>apps</p>
+          </div>
+          <div class="projects__4">
+            <img
+              src="./images/pattern-illustrations.svg"
+              alt="pattern-illustrations"
+            />
+            <p>illustrations</p>
+          </div>
+          <div class="projects__5">
+            <img
+              src="./images/pattern-photography.svg"
+              alt="pattern-photography"
+            />
+            <p>photography</p>
+          </div>
+          <div class="projects__6">
+            <img
+              src="./images/pattern-motion-graphics.svg"
+              alt="pattern-motion-graphics"
+            />
+            <p>motion graphics</p>
+          </div>
+        </div>
+
+        <div class="amy">
+          <img src="./images/image-amy.webp" alt="profile-picture" />
+          <div class="amy__text">
+            <h2>I’m Amy, and I’d love to work on your next project</h2>
+            <p>
+              I love working with others to create beautiful design solutions.
+              I’ve designed everything from brand illustrations to complete
+              mobile apps. I’m also handy with a camera!
+            </p>
+            <button>free consultation</button>
+          </div>
+        </div>
+      </section>
       <div class="myWork">
         <h2>My work</h2>
         <div class="carousel">
           <div class="carousel__inner">
-            <div class="carousel__item">
-              <img src="./images/image-slide-1.jpg" alt="carousel images">
+            <div class="carousel__item carousel__item--slide1">
+              <img src="./images/image-slide-1.jpg" alt="carousel images" />
             </div>
             <div class="carousel__item">
-              <img src="./images/image-slide-2.jpg" alt="carousel images">
+              <img src="./images/image-slide-2.jpg" alt="carousel images" />
             </div>
             <div class="carousel__item">
-              <img src="./images/image-slide-3.jpg" alt="carousel images">
+              <img src="./images/image-slide-3.jpg" alt="carousel images" />
             </div>
             <div class="carousel__item">
-              <img src="./images/image-slide-4.jpg" alt="carousel images">
+              <img src="./images/image-slide-4.jpg" alt="carousel images" />
             </div>
             <div class="carousel__item">
-              <img src="./images/image-slide-5.jpg" alt="carousel images">
+              <img src="./images/image-slide-5.jpg" alt="carousel images" />
             </div>
           </div>
         </div>
         <div class="carButtons">
-          <button><img src="./images/icon-arrow-right.svg" alt="icon-arrow-right"></button>
-          <button><img src="./images/icon-arrow-left.svg" alt="icon-arrow-left"></button>
+          <button onclick="nextSlide(); resetAuto()">
+            <img src="./images/icon-arrow-right.svg" alt="icon-arrow-right" />
+          </button>
+          <button onclick="prevSlide(); resetAuto()">
+            <img src="./images/icon-arrow-left.svg" alt="icon-arrow-left" />
+          </button>
         </div>
       </div>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
