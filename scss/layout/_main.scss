@@ -225,6 +225,11 @@
         cursor: pointer;
         font-weight: 500;
         text-transform: capitalize;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #755cde;
+        }
 
         @include size.breakpoint(desktop) {
           color: #fff;
@@ -309,7 +314,12 @@
       place-items: center;
       height: 50px;
       width: 50px;
+      cursor: pointer;
       transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #755cde;
+      }
 
       @media screen and (min-width: 360px) {
         width: 64px;
@@ -325,10 +335,6 @@
           height: 20px;
         }
       }
-    }
-
-    button:hover {
-      background-color: #755cde;
     }
   }
 }
@@ -409,6 +415,11 @@
     cursor: pointer;
     font-weight: 500;
     text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #755cde;
+    }
 
     @media screen and (min-width: 340px) {
       font-size: 0.9rem;

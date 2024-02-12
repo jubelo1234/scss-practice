@@ -1,13 +1,15 @@
 @use "../globals/" as size;
 
-header {
-  padding: 16px 5vw 0;
+footer {
+  padding: 0 6vw 0;
+  margin-bottom: 34px;
 
   @include size.breakpoint(tablet) {
-    padding: 34px 8vw 0;
+    padding: 0 8vw 0;
+    margin-bottom: 64px;
   }
 
-  nav {
+  .foot {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -26,11 +28,17 @@ header {
       color: white;
       background-color: #030303;
       font-size: 14px;
+      cursor: pointer;
       padding: 0 30px;
       border: none;
       font-weight: 700;
       height: 44px;
       border-radius: 28px;
+      transition: all 0.3s ease-in-out;
+    
+      &:hover {
+        background-color: #755cde;
+      }
 
       @include size.breakpoint(tablet) {
         font-size: 1rem;
@@ -38,5 +46,8 @@ header {
         padding: 0 2.9rem;
       }
     }
+
+    
   }
 }
+

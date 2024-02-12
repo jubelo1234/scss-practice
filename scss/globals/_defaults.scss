@@ -1,6 +1,16 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+*button {
+  transition: all 0.3s ease-in-out;
+  background-color: #030303;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #755cde;
+  }
 }
