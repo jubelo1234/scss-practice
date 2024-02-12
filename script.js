@@ -13,8 +13,6 @@ function goToSlide(slideNumber) {
   }
 
   const offset = -currentSlide * slideWidth;
-  console.log(offset);
-  console.log(slideWidth);
   carousel.style.transform = `translateX(${offset}px)`;
 }
 let autoAdvance = setInterval(nextSlide, 10000);
